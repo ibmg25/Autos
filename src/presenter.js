@@ -9,7 +9,7 @@ form.addEventListener("submit", (event) => {
 
   const auto = new Auto();
   const com = comando.value;
-  let posInicial = com.substr(4, 4);
 
-  div.innerHTML = "<p> Posicion Inicial: " + auto.getPosInicialX(posInicial) + ',' + auto.getPosInicialY(posInicial) + auto.getDirInicial(posInicial)  + "</p>";
+  div.innerHTML = "<p> Posicion Inicial: " + auto.getPosInicialX(com) + ',' + auto.getPosInicialY(com) + auto.getDirInicial(com)  + "</p>";
+  div.innerHTML += "<p> Comandos: " + auto.getComandos(com) + "</p>";
 });

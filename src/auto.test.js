@@ -17,9 +17,9 @@ describe("Auto", () => {
     expect(auto.getDirInicial("5,5/3,2N/ADAIA")).toEqual('N');
   });
 
-  // it("deberia mostrar los comandos", () => {
-  //   let auto = new Auto();
-  //   expect(auto.getComandos("AIIADAADIA")).toEqual("AIIADAADIA");
-  // });
+  it("deberia mostrar los comandos", () => {
+    let auto = new Auto();
+    expect(auto.getComandos("5,5/3,2N/ADAIA")).toEqual("ADAIA");
+  });
 
 });

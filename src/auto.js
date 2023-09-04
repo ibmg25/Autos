@@ -18,6 +18,12 @@ export class Auto{
     return dir;
   }
 
+  getComandos(lineaComandos){
+    let tam = lineaComandos.length;
+    let comandos = lineaComandos.substr(9, tam-9);
+    return comandos;
+  }
+
 }
 
 export default Auto;
