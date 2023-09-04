@@ -110,4 +110,9 @@ describe("Auto", () => {
     expect(auto.getPosInicialY("5,5/31,122N/ADAIA")).toEqual(122);
   });
 
+  it("deberia mostrar la direccion inicial cuando hay valores de mas de un digito", () => {
+    let auto = new Auto();
+    expect(auto.getDirInicial("53,5/123,27E/ADAIA")).toEqual('E');
+  });
+
 });

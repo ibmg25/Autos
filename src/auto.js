@@ -27,7 +27,7 @@ export class Auto{
     let tam = 0;
     for(let i = posInicial; i < lineaComandos.length; i++){
       if(lineaComandos[i] == '/'){
-        tam = i;
+        tam = i - posInicial;
         break;
       }
     }
@@ -111,8 +111,8 @@ export class Auto{
   }
 
   getDirInicial(lineaComandos){
-    let pos = lineaComandos.substr(4, 4);
-    let dir = pos[3];
+    let tam = this.getLineaGrid(lineaComandos).length + this.getLineaPos(lineaComandos).length;
+    let dir = lineaComandos[tam];
     return dir;
   }
 
