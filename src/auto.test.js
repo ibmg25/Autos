@@ -22,4 +22,10 @@ describe("Auto", () => {
     expect(auto.getComandos("5,5/3,2N/ADAIA")).toEqual("ADAIA");
   });
 
+  it("deberia mostrar la posicion actual en X", () => {
+    let auto = new Auto();
+    auto.setPosX(7);
+    expect(auto.getPosX()).toEqual(7);
+  });
+
 });

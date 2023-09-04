@@ -30,6 +30,14 @@ export class Auto{
     return comandos;
   }
 
+  setPosX(x){
+    this.posX = x;
+  }
+
+  getPosX(){
+    return this.posX;
+  }
+
 }
 
 export default Auto;
