@@ -28,4 +28,10 @@ describe("Auto", () => {
     expect(auto.getPosX()).toEqual(7);
   });
 
+  it("deberia mostrar la posicion actual en Y", () => {
+    let auto = new Auto();
+    auto.setPosY(4);
+    expect(auto.getPosY()).toEqual(4);
+  });
+
 });

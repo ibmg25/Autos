@@ -38,6 +38,14 @@ export class Auto{
     return this.posX;
   }
 
+  setPosY(y){
+    this.posY = y;
+  }
+
+  getPosY(){
+    return this.posY;
+  }
+
 }
 
 export default Auto;
