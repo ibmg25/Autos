@@ -12,4 +12,9 @@ describe("Auto", () => {
     expect(auto.getPosInicialY("3,2N")).toEqual(2);
   });
 
+  it("deberia mostrar la direccion inicial", () => {
+    let auto = new Auto();
+    expect(auto.getDirInicial("3,2N")).toEqual('N');
+  });
+
 });

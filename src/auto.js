@@ -10,6 +10,11 @@ export class Auto{
     return y;
   }
 
+  getDirInicial(pos){
+    let dir = pos[3];
+    return dir;
+  }
+
 }
 
 export default Auto;
