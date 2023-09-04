@@ -97,6 +97,11 @@ describe("Auto", () => {
     expect(auto.getDir()).toEqual('O');
   });
 
-  //falla con grids de tamanio > a 9 por uso de posiciones 
+  it("Valida limites del grid para tamanios de mas de un digito", () => {
+    let auto = new Auto();
+    auto.setGrid("73,145/3,2N/ADAIA");
+    expect(auto.getMaxX()).toEqual(73);
+    expect(auto.getMaxY()).toEqual(145);
+  }); 
 
 });

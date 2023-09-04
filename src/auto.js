@@ -1,3 +1,5 @@
+import { parse } from "@babel/core";
+
 export class Auto{
 
   constructor(){
@@ -9,6 +11,17 @@ export class Auto{
     this.maxY = 100;
   }
 
+  getLineaGrid(lineaComandos){
+    let tam = 0;
+    for(let i = 0; i < lineaComandos.length; i++){
+      if(lineaComandos[i] == '/'){
+        tam = i;
+        break;
+      }
+    }
+    return lineaComandos.substr(0, tam);
+  }
+
   inicializar(lineaComandos){
     this.setPosX(this.getPosInicialX(lineaComandos));
     this.setPosY(this.getPosInicialY(lineaComandos));
@@ -17,8 +30,27 @@ export class Auto{
   }
 
   setGrid(lineaComandos){
-    this.maxX = lineaComandos.substr(0, 1) - '0';
-    this.maxY = lineaComandos.substr(2, 1) - '0';
+    let input = this.getLineaGrid(lineaComandos);
+    let X = "";
+    let Y = "";
+    for(let i = 0; i < input.length; i++){
+      if(input[i] == ','){
+        for(let j = i+1; j < input.length; j++){
+          if(input[j] == '/'){
+            break;
+          }
+          else{
+            Y += input[j];
+          }
+        }
+        break;
+      }
+      else{
+        X += input[i];
+      }
+    }
+    this.maxX = parseInt(X);
+    this.maxY = parseInt(Y);
   }
 
   getMaxX(){
