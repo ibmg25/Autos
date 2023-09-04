@@ -192,9 +192,15 @@ export class Auto{
   }
 
   getPosFinal(lineaComandos){
-    this.ejecutarComandos(lineaComandos);
-    let pos = (this.posX+'0') + ',' + (this.posY+'0') + this.dir;
+    let pos = (this.posX) + ',' + (this.posY) + this.polos[this.dir];
     return pos; 
+  }
+
+  ejecutarTodo(lineaComandos){
+    this.inicializar(lineaComandos);
+    this.ejecutarComandos(lineaComandos);
+    let final = this.getPosFinal(lineaComandos);
+    return final;
   }
 
 }

@@ -14,5 +14,5 @@ form.addEventListener("submit", (event) => {
   div.innerHTML = "<p> Posicion Inicial: " + auto.getPosInicialX(com) + ',' + auto.getPosInicialY(com) + auto.getDirInicial(com)  + "</p>";
   div.innerHTML += "<p> Comandos: " + auto.getComandos(com) + "</p>";
   auto.ejecutarComandos(com);
-  div.innerHTML += "<p> Posicion Final: " + auto.getPosX() + ',' + auto.getPosY() + auto.getDir() + "</p>";
+  div.innerHTML += "<p> Posicion Final: " + auto.getPosFinal() + "</p>";
 });

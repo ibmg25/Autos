@@ -129,4 +129,14 @@ describe("Auto", () => {
     expect(auto.getDir()).toEqual('O');
   });
 
+  it("deberia pasar el caso de prueba 1", () => {
+    let auto = new Auto();
+    expect(auto.ejecutarTodo("5,5/1,2N/IAIAIAIAA")).toEqual("1,3N");
+  });
+
+  it("deberia pasar el caso de prueba 2", () => {
+    let auto = new Auto();
+    expect(auto.ejecutarTodo("5,5/3,3E/AADAADADDA")).toEqual("5,1E");
+  });
+
 });
