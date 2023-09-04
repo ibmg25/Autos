@@ -120,4 +120,13 @@ describe("Auto", () => {
     expect(auto.getComandos("51,5/123,24N/ADAIA")).toEqual("ADAIA");
   });
 
+  it("deberia ejecutar los comandos cuando hay valores de mas de un digito", () => {
+    let auto = new Auto();
+    auto.inicializar("512,545/33,22N/ADAIAI");
+    auto.ejecutarComandos("512,545/33,20N/ADAIAI");
+    expect(auto.getPosX()).toEqual(34);
+    expect(auto.getPosY()).toEqual(24);
+    expect(auto.getDir()).toEqual('O');
+  });
+
 });
