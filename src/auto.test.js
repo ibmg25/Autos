@@ -61,8 +61,8 @@ describe("Auto", () => {
   it("Valida limites del grid", () => {
     let auto = new Auto();
     auto.setGrid("7,5/3,2N/ADAIA");
-    expect(auto.getMaxX()).toEqual(6);
-    expect(auto.getMaxY()).toEqual(4);
+    expect(auto.getMaxX()).toEqual(7);
+    expect(auto.getMaxY()).toEqual(5);
   });
 
   it("deberia avanzar", () => {
@@ -83,8 +83,8 @@ describe("Auto", () => {
     auto.inicializar("5,5/3,2N/ADAIA");
     expect(auto.getPosX()).toEqual(3);
     expect(auto.getPosY()).toEqual(2);
-    expect(auto.getMaxX()).toEqual(4);
-    expect(auto.getMaxY()).toEqual(4);
+    expect(auto.getMaxX()).toEqual(5);
+    expect(auto.getMaxY()).toEqual(5);
     expect(auto.getDir()).toEqual('N');
   });
 
