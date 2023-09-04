@@ -5,6 +5,21 @@ export class Auto{
     this.posY = -1;
     this.dir = -1;
     this.polos = "NESO";
+    this.maxX = 100;
+    this.maxY = 100;
+  }
+
+  setGrid(lineaComandos){
+    this.maxX = lineaComandos.substr(0, 1) - '0' - 1;
+    this.maxY = lineaComandos.substr(2, 1) - '0' - 1;
+  }
+
+  getMaxX(){
+    return this.maxX;
+  }
+
+  getMaxY(){
+    return this.maxY;
   }
 
   getPosInicialX(lineaComandos){
