@@ -1,5 +1,11 @@
 export class Auto{
 
+  constructor(){
+    this.posX = -1;
+    this.posY = -1;
+    this.dir = '-';
+  }
+
   getPosInicialX(lineaComandos){
     let pos = lineaComandos.substr(4, 4);
     let x = pos[0]-'0';
