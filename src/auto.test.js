@@ -65,4 +65,17 @@ describe("Auto", () => {
     expect(auto.getMaxY()).toEqual(4);
   });
 
+  it("deberia avanzar", () => {
+    let auto = new Auto();
+    auto.setPosX(1);
+    auto.setPosY(1);
+    auto.setDir('E');
+    auto.avanzar();
+    auto.girarDerecha();
+    auto.avanzar();
+    auto.avanzar();
+    expect(auto.getPosX()).toEqual(2);
+    expect(auto.getPosY()).toEqual(0);
+  });
+
 });

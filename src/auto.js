@@ -91,6 +91,17 @@ export class Auto{
       this.dir = 3;
   }
 
+  avanzar(){
+    if(this.dir == 0 && this.posY < this.maxY)
+      this.posY = this.posY + 1;
+    if(this.dir == 1 && this.posX < this.maxX)
+      this.posX = this.posX + 1;
+    if(this.dir == 2 && this.posY > 0)
+      this.posY = this.posY - 1;
+    if(this.dir == 3 && this.posX > 0)
+      this.posX = this.posX - 1;
+  }
+
 }
 
 export default Auto;
