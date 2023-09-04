@@ -5,6 +5,11 @@ export class Auto{
     return x;
   }
 
+  getPosInicialY(pos){
+    let y = pos[2]-'0';
+    return y;
+  }
+
 }
 
 export default Auto;
