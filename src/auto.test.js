@@ -49,4 +49,13 @@ describe("Auto", () => {
     expect(auto.getDir()).toEqual('N');
   });
 
+  it("deberia girar a la izquierda", () => {
+    let auto = new Auto();
+    auto.setDir('E');
+    auto.girarIzquierda();
+    expect(auto.getDir()).toEqual('N');
+    auto.girarIzquierda();
+    expect(auto.getDir()).toEqual('O');
+  });
+
 });

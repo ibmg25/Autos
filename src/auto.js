@@ -70,6 +70,12 @@ export class Auto{
       this.dir = 0;
   }
 
+  girarIzquierda(){
+    this.dir = this.dir - 1;
+    if(this.dir < 0)
+      this.dir = 3;
+  }
+
 }
 
 export default Auto;
