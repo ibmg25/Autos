@@ -121,6 +121,12 @@ export class Auto{
     }
   }
 
+  getPosFinal(lineaComandos){
+    this.ejecutarComandos(lineaComandos);
+    let pos = (this.posX+'0') + ',' + (this.posY+'0') + this.dir;
+    return pos; 
+  }
+
 }
 
 export default Auto;
