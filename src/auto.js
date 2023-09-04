@@ -109,6 +109,18 @@ export class Auto{
       this.posX = this.posX - 1;
   }
 
+  ejecutarComandos(lineaComandos){
+    let comandos = this.getComandos(lineaComandos);
+    for(let i = 0; i < comandos.length; i++){
+      if(comandos[i] == 'A')
+        this.avanzar();
+      if(comandos[i] == 'D')
+        this.girarDerecha();
+      if(comandos[i] == 'I')
+        this.girarIzquierda(); 
+    }
+  }
+
 }
 
 export default Auto;

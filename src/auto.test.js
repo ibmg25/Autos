@@ -88,4 +88,13 @@ describe("Auto", () => {
     expect(auto.getDir()).toEqual('N');
   });
 
+  it("deberia ejecutar los comandos", () => {
+    let auto = new Auto();
+    auto.inicializar("5,5/3,2N/ADAIAI");
+    auto.ejecutarComandos("5,5/3,2N/ADAIAI");
+    expect(auto.getPosX()).toEqual(4);
+    expect(auto.getPosY()).toEqual(4);
+    expect(auto.getDir()).toEqual('O');
+  });
+
 });
