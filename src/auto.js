@@ -3,7 +3,8 @@ export class Auto{
   constructor(){
     this.posX = -1;
     this.posY = -1;
-    this.dir = '-';
+    this.dir = -1;
+    this.polos = "NESO";
   }
 
   getPosInicialX(lineaComandos){
@@ -44,6 +45,21 @@ export class Auto{
 
   getPosY(){
     return this.posY;
+  }
+
+  setDir(d){
+    if(this.polos[0] == d)
+      this.dir = 0;
+    if(this.polos[1] == d)
+    this.dir = 1;
+    if(this.polos[2] == d)
+    this.dir = 2;
+    if(this.polos[3] == d)
+    this.dir = 3;
+  }
+
+  getDir(){
+    return this.polos[this.dir];
   }
 
 }

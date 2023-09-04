@@ -34,4 +34,10 @@ describe("Auto", () => {
     expect(auto.getPosY()).toEqual(4);
   });
 
+  it("deberia mostrar la direccion actual", () => {
+    let auto = new Auto();
+    auto.setDir('O');
+    expect(auto.getDir()).toEqual('O');
+  });
+
 });
