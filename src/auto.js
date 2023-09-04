@@ -22,6 +22,18 @@ export class Auto{
     return lineaComandos.substr(0, tam);
   }
 
+  getLineaPos(lineaComandos){
+    let posInicial = this.getLineaGrid(lineaComandos).length + 1;
+    let tam = 0;
+    for(let i = posInicial; i < lineaComandos.length; i++){
+      if(lineaComandos[i] == '/'){
+        tam = i;
+        break;
+      }
+    }
+    return lineaComandos.substr(posInicial, tam);
+  }
+
   inicializar(lineaComandos){
     this.setPosX(this.getPosInicialX(lineaComandos));
     this.setPosY(this.getPosInicialY(lineaComandos));
@@ -62,14 +74,39 @@ export class Auto{
   }
 
   getPosInicialX(lineaComandos){
-    let pos = lineaComandos.substr(4, 4);
-    let x = pos[0]-'0';
+    let input = this.getLineaPos(lineaComandos);
+    let X = "";
+    for(let i = 0; i < input.length; i++){
+      if(input[i] == ','){
+        break;
+      }
+      else{
+        X += input[i];
+      }
+    }
+    let x = parseInt(X);
     return x;
   }
 
   getPosInicialY(lineaComandos){
-    let pos = lineaComandos.substr(4, 4);
-    let y = pos[2]-'0';
+    let input = this.getLineaPos(lineaComandos);
+    let Y = "";
+    let posInicial = 0;
+    for(let i = 0; i < input.length; i++){
+      if(input[i] == ','){
+        posInicial = i+1;
+        break;
+      }
+    }
+    for(let i = posInicial; i < input.length; i++){
+      if(input[i] == 'N' || input[i] == 'E' || input[i] == 'S' || input[i] == 'O'){
+        break;
+      }
+      else{
+        Y += input[i];
+      }
+    }
+    let y = parseInt(Y);
     return y;
   }
 

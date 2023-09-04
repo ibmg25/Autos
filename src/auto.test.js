@@ -104,4 +104,10 @@ describe("Auto", () => {
     expect(auto.getMaxY()).toEqual(145);
   }); 
 
+  it("deberia mostrar la posicion inicial para tamanios mayores a 10", () => {
+    let auto = new Auto();
+    expect(auto.getPosInicialX("5,5/31,122N/ADAIA")).toEqual(31);
+    expect(auto.getPosInicialY("5,5/31,122N/ADAIA")).toEqual(122);
+  });
+
 });
