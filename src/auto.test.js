@@ -115,4 +115,9 @@ describe("Auto", () => {
     expect(auto.getDirInicial("53,5/123,27E/ADAIA")).toEqual('E');
   });
 
+  it("deberia mostrar los comandos cuando hay valores de mas de un digito", () => {
+    let auto = new Auto();
+    expect(auto.getComandos("51,5/123,24N/ADAIA")).toEqual("ADAIA");
+  });
+
 });

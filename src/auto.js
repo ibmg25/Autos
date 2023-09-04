@@ -117,8 +117,9 @@ export class Auto{
   }
 
   getComandos(lineaComandos){
-    let tam = lineaComandos.length;
-    let comandos = lineaComandos.substr(9, tam-9);
+    let posInicial = this.getLineaGrid(lineaComandos).length + this.getLineaPos(lineaComandos).length + 2;
+    let tam = lineaComandos.length - posInicial;
+    let comandos = lineaComandos.substr(posInicial, tam);
     return comandos;
   }
 
