@@ -78,4 +78,14 @@ describe("Auto", () => {
     expect(auto.getPosY()).toEqual(0);
   });
 
+  it("deberia inicializar los valores", () => {
+    let auto = new Auto();
+    auto.inicializar("5,5/3,2N/ADAIA");
+    expect(auto.getPosX()).toEqual(3);
+    expect(auto.getPosY()).toEqual(2);
+    expect(auto.getMaxX()).toEqual(4);
+    expect(auto.getMaxY()).toEqual(4);
+    expect(auto.getDir()).toEqual('N');
+  });
+
 });

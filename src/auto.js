@@ -9,6 +9,13 @@ export class Auto{
     this.maxY = 100;
   }
 
+  inicializar(lineaComandos){
+    this.setPosX(this.getPosInicialX(lineaComandos));
+    this.setPosY(this.getPosInicialY(lineaComandos));
+    this.setDir(this.getDirInicial(lineaComandos));
+    this.setGrid(lineaComandos);
+  }
+
   setGrid(lineaComandos){
     this.maxX = lineaComandos.substr(0, 1) - '0' - 1;
     this.maxY = lineaComandos.substr(2, 1) - '0' - 1;
