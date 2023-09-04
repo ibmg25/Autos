@@ -59,7 +59,15 @@ export class Auto{
   }
 
   getDir(){
+    if (this.dir == -1)
+      return '-';
     return this.polos[this.dir];
+  }
+
+  girarDerecha(){
+    this.dir = this.dir + 1;
+    if(this.dir > 3)
+      this.dir = 0;
   }
 
 }
