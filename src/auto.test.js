@@ -97,4 +97,6 @@ describe("Auto", () => {
     expect(auto.getDir()).toEqual('O');
   });
 
+  //falla con grids de tamanio > a 9 por uso de posiciones 
+
 });

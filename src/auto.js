@@ -17,8 +17,8 @@ export class Auto{
   }
 
   setGrid(lineaComandos){
-    this.maxX = lineaComandos.substr(0, 1) - '0' - 1;
-    this.maxY = lineaComandos.substr(2, 1) - '0' - 1;
+    this.maxX = lineaComandos.substr(0, 1) - '0';
+    this.maxY = lineaComandos.substr(2, 1) - '0';
   }
 
   getMaxX(){
